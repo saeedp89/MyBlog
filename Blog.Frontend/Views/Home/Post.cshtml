@@ -1,0 +1,30 @@
+﻿@model Post
+
+@{
+    ViewBag.Title = Model.Title;
+    ViewBag.Description = Model.Description;
+    ViewBag.KeyWords = $"{Model.Tags?.Replace(","," ")}";
+    var pathPrefix = Context.Request.PathBase;
+}
+@* *@
+@* <h2>@Model.Title</h2> *@
+@* @if (!string.IsNullOrWhiteSpace(Model.Image)) *@
+@* { *@
+@*     var path = $"/image/{Model.Image}"; *@
+@*     <img src="@path" width="500"/> *@
+@* } *@
+@* <p>@Model.Body</p> *@
+
+<div class="container">
+    <div class="post no-shadow">
+        @if (!string.IsNullOrWhiteSpace(Model.Image))
+        {
+            var path = $"{pathPrefix}/image/{Model.Image}";
+            <img src="@path"/>
+            <span class="title">@Model.Title</span>
+        }
+    </div>
+    <div class="post-body">
+        @Model.Body
+    </div>
+</div>

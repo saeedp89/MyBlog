@@ -1,0 +1,80 @@
+﻿body {
+    margin: 0;
+    background-color: lightgray;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+nav {
+    background-color: #142127;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    padding: 15px 20px;
+}
+
+.main-image {
+    height: 500px;
+    background-image: url('../content/static/ubuntu-logo.jpeg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35%;
+    text-shadow: 0 0 8px black;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+}
+
+.post {
+    margin: 5px;
+    position: relative;
+    display: flex;
+    height: 400px;
+    box-shadow: 0 0 5px 0 black;
+}
+
+.post img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.no-shadow { box-shadow: none; }
+
+.post-body {
+    margin: -5px 5px 0;
+    background-color: white;
+}
+
+.button {
+    padding: 15px 32px;
+    background-color: #142127;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 6px 2px;
+    cursor: pointer;
+    border-radius: 10%;
+}
